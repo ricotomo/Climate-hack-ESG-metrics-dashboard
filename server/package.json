@@ -1,0 +1,59 @@
+{
+  "name": "climate-founder-climate-hack-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js",
+    "watch": "tsc -w",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --quiet --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamjsawicki/climate-founders-climate-hack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamjsawicki/climate-founders-climate-hack/issues"
+  },
+  "homepage": "https://github.com/adamjsawicki/climate-founders-climate-hack#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "apollo-server-express": "^2.21.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "prettier": "^2.2.1",
+    "reflect-metadata": "^0.1.13",
+    "sqlite": "^4.0.19",
+    "sqlite3": "^5.0.2",
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.2.31"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^14.14.31",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ]
+  }
+}
